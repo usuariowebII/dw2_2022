@@ -1,5 +1,7 @@
 personas=[]; // declara el array
-document.getElementById('boton').onclick=cargarTabla; // asigno la funcion limpiarTabla al evento click del boton
+document.getElementById('btNuevo').onclick=pruebas;
+document.getElementById('btCargar').onclick=cargarTabla;
+document.getElementById('btLimpiar').onclick=limpiarTabla; // asigno la funcion limpiarTabla al evento click del boton
 window.onload=iniciarApp;
 function iniciarApp()
 {
@@ -35,3 +37,14 @@ function cargarTabla()
       document.getElementById('tab_datos').innerHTML=salida;
   }
 //  cargarDatos();
+function pruebas()
+   {
+     console.log("probando");
+     var botones=document.getElementsByClassName('btn');
+     //console.log(botones);
+     for (var i = 0; i < botones.length; i++) {
+       botones[i].classList.add("btn-outline-info");
+     }
+
+
+   }
